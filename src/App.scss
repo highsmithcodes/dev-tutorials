@@ -7,8 +7,10 @@ $secondary-color: #286f6c;
 $main-blue: #0d2f3f;
 $dark: #000;
 
-$small: 300px;
-$medium: 1024px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1024px;
 
 /* Global */
 body {
@@ -26,7 +28,10 @@ body {
   color: $primary-color;
   background: $main-blue;
 }
-
+.container{
+  max-width: $xlarge;
+  margin: 0 auto;
+}
 h1{
   text-align: center;
 }
@@ -55,6 +60,8 @@ button{
   padding-bottom: 10px;
 }
 /* END Global */
+
+
 
 /* NavBar */
 .navbar{
@@ -219,7 +226,7 @@ button{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding:40px 0;
+  padding:40px 20px;
   div{
     flex: 1 45%;
     color: $main-blue;
@@ -313,8 +320,30 @@ button{
 /* END Footer */
 
 /* Mobile */
-@media screen and (max-width: $medium) {
+@media screen and (max-width: $xlarge) {
   .mainNav{display: none;}
   .mobileNav{display: block;}
+}
+@media screen and (max-width: $large) {
+  .container{max-width: $large;}
+  .home #top-products {flex-wrap: wrap;}
+  .home-banner{flex-wrap: wrap;justify-content: center;}
+  .home-banner .header-image, .home-banner .home-header{margin:40px 0;}
+  .split50 {flex-direction: column;}
+}
+@media screen and (max-width: $medium) {
+   h1{font-size: 3em !important;}
+  h2{font-size: 2em !important;}
+  .container{max-width: $medium;}
+  .mobileNav button{padding: 0;}
+  a button{font-size: 1.2em;}
+  .home-banner, .home-banner h1{text-align: left;}
+  .home-banner .header-image {width: 210px;height: 210px;}
+  .home-banner .header-image .brackets {font-size: 4em;}
+  .home-banner .header-image .bubble{left: -40px;}
+  .split50 div{padding:20px;}
+}
+@media screen and (max-width: $small) {
+  .container{max-width: $small;}
 }
 /* END Mobile */
