@@ -1,7 +1,6 @@
 import React from 'react';
 import data from '../db.json';
 import {Link} from 'react-router-dom';
-import Single from '../routes/Single';
 
 function ProductList(){
   const DisplayData=data.map((info)=>{
