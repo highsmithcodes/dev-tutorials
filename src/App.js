@@ -11,6 +11,7 @@ function App(props) {
   return (
     <div className="App">
     {/* E-Commerce Story for free pdfs on your personal coding brand */}
+    {/* DevJuice / DevWeight */}
       <main>
           <NavBar />
           <Routes>
