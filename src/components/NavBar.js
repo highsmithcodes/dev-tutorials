@@ -10,6 +10,8 @@ function NavBar() {
     const handleToggle = () => {
         setActive(!isActive);
     }
+
+    
   return (
     <div className='navbar'>
         <div className='logo'><Link to="/">Logo</Link></div>
@@ -25,11 +27,12 @@ function NavBar() {
                     <img className="close" src={close} alt="close"/>
                 </button>
             </div>
-            <div class="mobileNav-container">
+            <div className="mobileNav-container">
                 <Link to="/">Home </Link>
                 <Link to="/story">Our Story</Link>
                 <Link to="/products">Products</Link>
             </div>
+            <div className='overlay'/>
         </div>
     </div>
 

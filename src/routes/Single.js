@@ -1,11 +1,9 @@
 import React from "react";
 
-function Single() {
-  return (
-    <div>
-    <h1>Single Page</h1>
-    </div>
-  );
-}
+const Single = () => (
+  <div>
+    <h2>Single</h2>
+  </div>
+)
 
 export default Single;

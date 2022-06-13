@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductList from '../components/ProductList';
 
-const Products = () => (
+const Products = (props) => (
   <div className="page container">
     <h1>Products</h1>
     <div className='sub-head'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>

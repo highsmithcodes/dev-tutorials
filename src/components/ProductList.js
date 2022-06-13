@@ -1,31 +1,31 @@
 import React from 'react';
-import data from '../db.json';
-import {Link} from 'react-router-dom';
+import posts from '../db.json';
+import {Link, NavLink, Route} from 'react-router-dom';
+import Single from '../routes/Single';
 
-function ProductList(){
-  const DisplayData=data.map((info)=>{
-          return(
-            <div className='product-card'>
-              <Link to={info.url}>
-                <div class="thumbnail">
-                  <img src={info.image} alt={info.title} />
+export const ProductList = (props) =>{
+  const testPosts = posts;
+
+    return(
+
+      <div className='test'>
+        {testPosts.map(post => (
+          <div className='product-card' key={post.id}>
+            <Link to={`/products/${post.id}`}>
+              <div className='thumbnail'>
+                <img src={post.image} alt={post.title} />
+              </div>
+              <div className="product-details">
+                  <div className="product-title" >{post.title}</div>
+                  <div className="product-description">{post.description}</div>
+                  <div className="price">{post.price}</div>
                 </div>
-                <div className="product-details">
-                  <div className="product-title">{info.title}</div>
-                  <div className="product-description">{info.description}</div>
-                  <div className="price">{info.price}</div>
-                </div>
-              </Link>
+                </Link>
             </div>
-          )
-      }
-  )
+        ))}
+      </div>
+    )
 
-  return(
-    <>
-      {DisplayData}
-    </>
-  )
 }
 
 export default ProductList;

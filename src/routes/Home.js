@@ -1,23 +1,24 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import data from '../db.json';
+import {Link, NavLink} from 'react-router-dom';
+import posts from '../db.json';
 import about from '../images/about-picture.png';
+import ProductList from '../components/ProductList';
 
-function Home(){
+function Home(props){
   var size = 3;
-  var items = data.slice(0, size).map(info => {
-      return <div className='product-card'>
-              <a href={info.url}>
-              <div class="thumbnail">
-                <img src={info.image} alt={info.title} />
-              </div>
-              <div className="product-details">
-                <div className="product-title">{info.title}</div>
-                <div className="product-description">{info.description}</div>
-                <div className="price">{info.price}</div>
-              </div>
-              </a>
-            </div>
+  var items = posts.slice(0, size).map(post => {
+      return <div className='product-card' key={post.id}>
+      <NavLink to={`/products/${post.id}`}>
+        <div className='thumbnail'>
+          <img src={post.image} alt={post.title} />
+        </div>
+        <div className="product-details">
+            <div className="product-title" >{post.title}</div>
+            <div className="product-description">{post.description}</div>
+            <div className="price">{post.price}</div>
+          </div>
+          </NavLink>
+      </div>
   });   
   return(
   <>
