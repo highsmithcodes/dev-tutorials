@@ -7,7 +7,7 @@ import Products from './routes/Products';
 import Story from './routes/Story';
 import Single from './routes/Single';
 import { Route, Routes } from 'react-router-dom';
-import Blog from './db.json';
+import posts from './db.json';
 
 function App() {
 
