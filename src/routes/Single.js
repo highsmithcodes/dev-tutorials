@@ -1,24 +1,20 @@
 import React from 'react'
-import { useParams } from 'react-router'
+import {Link, useParams} from 'react-router-dom';
 import posts from '../db.json';
 
 
-export const Single = () => {
-    const {id} = useParams();
+function Single() {
+  let params = useParams();
+  const thisProduct = posts.find(post => post.id == params.id)
 
-    console.log(id)
-
-    const filtered = posts.filter(post => {
-      return post.id === id;
-    });
-
-    console.log(filtered);
-
-
-    return (
-        <div>
-         {filtered.id}
-        </div>
-    )
+  console.log(thisProduct)
+  return (
+    <>
+      <h1>Post {params.id}</h1>
+      <p>{thisProduct.title}</p>
+    </>
+  
+  );
 }
+
 export default Single;

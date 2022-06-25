@@ -2,20 +2,8 @@ import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import posts from '../db.json';
 import about from '../images/about-picture.png';
-import ProductList from '../components/ProductList';
-import ProductCard from '../components/ProductCard';
 
-function Home(props){
-  var size = 3;
-  var items = posts.slice(0, size).map(post => (
-    <ProductCard 
-      id={post.id}
-      title={post.title} 
-      image={post.image}
-      description={post.description}
-      price={post.price}
-    />
-  ))  
+function Home(){ 
   return(
   <>
     <div className='home-banner'>
@@ -34,7 +22,22 @@ function Home(props){
       </div>
       <div className='top-product-container'>
         <div id="top-products">
-          {items}
+          <div className='product-grid'>
+              {posts.slice(0, 3).map(post => ( 
+                <div className='product-card' key={post.id}>
+                  <Link  to={`/product/${post.id}`}>
+                    <div className='thumbnail'>
+                    <img src={post.image} alt={post.title} />
+                    </div>
+                    <div className="product-details">
+                        <div className="product-title" >{post.title}</div>
+                        <div className="product-description">{post.description}</div>
+                        <div className="price">{post.price}</div>
+                    </div>
+                  </Link>
+                </div>
+              ))} 
+            </div>
         </div>
         <div class="center-align">
           <Link to="/products"><button>Products</button></Link>
