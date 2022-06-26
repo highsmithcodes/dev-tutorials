@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import posts from '../db.json';
 
 
@@ -10,8 +10,21 @@ function Single() {
   console.log(thisProduct)
   return (
     <>
-      <h1>Post {params.id}</h1>
-      <p>{thisProduct.title}</p>
+      <div className='container single'>
+        
+        <div className='single-image'>
+          <img src={`.${thisProduct.image}`} alt={thisProduct.title} />
+        </div>
+        
+        <div className='single-content'>
+          <h1>{thisProduct.title}</h1>
+          <div className='single-meta'>
+            <p>{thisProduct.date_added}</p>
+          </div>
+          <p>{thisProduct.description}</p>
+        </div>
+      
+      </div>
     </>
   
   );
