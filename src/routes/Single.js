@@ -5,7 +5,7 @@ import posts from '../db.json';
 
 function Single() {
   let params = useParams();
-  const thisProduct = posts.find(post => post.id == params.id)
+  const thisProduct = posts.find(post => post.id === params.id)
 
   console.log(thisProduct)
   return (
