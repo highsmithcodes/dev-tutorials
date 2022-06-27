@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom';
-import posts from '../db.json';
+import ReactMarkdown from "react-markdown";
 
-
-function Single() {
+const Single = ({posts}) => {
   let params = useParams();
-  const thisProduct = posts.find(post => post.id = params.id)
+  const thisProduct = posts.find(post => post.id == params.id)
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    fetch(`.${thisProduct.body}`)
+      .then((res) => res.text())
+      .then((text) => setContent(text));
+  }, []);
 
   console.log(thisProduct)
   return (
@@ -22,6 +28,9 @@ function Single() {
             <p>{thisProduct.date_added}</p>
           </div>
           <p>{thisProduct.description}</p>
+          <div className='single-body'>
+            <ReactMarkdown children={content} />
+          </div>
         </div>
       
       </div>
