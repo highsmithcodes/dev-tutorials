@@ -9,7 +9,7 @@ function Home(){
     <div className='home-banner'>
       <div className='home-header'>
         <h1>Dev Tutorials</h1>
-        <div className='home-sub-head'>Free tutorials for the passionate developer</div>
+        <div className='home-sub-head'>for the passionate developer</div>
       </div>
       <div className='header-image'>
           <div className='brackets'>[ ]</div>
@@ -25,7 +25,7 @@ function Home(){
           <div className='product-grid'>
               {posts.slice(0, 3).map(post => ( 
                 <div className='product-card' key={post.id}>
-                  <Link  to={`/product/${post.id}`}>
+                  <Link to={`/blog/${post.url}`}>
                     <div className='thumbnail'>
                     <img src={post.image} alt={post.title} />
                     </div>
@@ -40,7 +40,7 @@ function Home(){
             </div>
         </div>
         <div class="center-align">
-          <Link to="/products"><button>Products</button></Link>
+          <Link to="/posts"><button>Blog</button></Link>
         </div>
       </div>
       <div id="about-us">

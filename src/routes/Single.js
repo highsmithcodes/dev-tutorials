@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 
 const Single = ({posts}) => {
   let params = useParams();
-  const thisProduct = posts.find(post => post.id == params.id)
+  const thisProduct = posts.find(post => post.url == params.url)
   const [content, setContent] = useState("");
 
   useEffect(() => {
@@ -13,7 +13,6 @@ const Single = ({posts}) => {
       .then((text) => setContent(text));
   }, []);
 
-  console.log(thisProduct)
   return (
     <>
       <div className='container single'>
@@ -27,7 +26,6 @@ const Single = ({posts}) => {
           <div className='single-meta'>
             <p>{thisProduct.date_added}</p>
           </div>
-          <p>{thisProduct.description}</p>
           <div className='single-body'>
             <ReactMarkdown children={content} />
           </div>

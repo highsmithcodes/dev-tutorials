@@ -1,7 +1,7 @@
 import React from "react";
 import './App.scss';
 import Home from './routes/Home';
-import Products from './routes/Products';
+import Posts from './routes/Posts';
 import Story from './routes/Story';
 import Single from './routes/Single';
 import Error from "./routes/Error";
@@ -19,8 +19,8 @@ function App() {
               <Route index element={<Home />} />
               <Route path="/" element={<Home />} />
               <Route path="/story" element={<Story/>} />
-              <Route path="/products" element={<Products posts={posts} />}/>
-              <Route path="/product/:id" element={<Single posts={posts} />}/>          
+              <Route path="/blog" element={<Posts posts={posts} />}/>
+              <Route path="/blog/:url" element={<Single posts={posts} />}/>          
               <Route render={() => <Error />}/>
               </Route>
           </Routes>

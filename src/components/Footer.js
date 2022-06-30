@@ -1,8 +1,11 @@
 import React from 'react';
+import logo from '../images/dev-weight-logo-full.png';
+
 
 const Footer = () => (
   <div className="footer">
-     <p className='copy'>© {new Date().getFullYear()} Logo</p>
+      <img src={logo} alt="Dev Weight | Developer Tutorials" /> 
+     <p className='copy'>© {new Date().getFullYear()}</p>
   </div>
 );
 

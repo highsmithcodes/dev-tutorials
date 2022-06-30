@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import bars from '../images/bars.svg';
 import close from '../images/close.svg';
+import logo from '../images/dev-weight-logo-full.png';
 
 function NavBar() {
 
@@ -14,11 +15,11 @@ function NavBar() {
     
   return (
     <div className='navbar'>
-        <div className='logo'><Link to="/">Logo</Link></div>
+        <div className='logo'><Link to="/"><img src={logo} alt="Dev Weight | Developer Tutorials" /></Link></div>
         <div className='mainNav'>
              <Link to="/">Home </Link>
              <Link to="/story">Our Story</Link>
-             <Link to="/products">Products</Link>
+             <Link to="/blog">Blog</Link>
         </div>
         <div className={`mobileNav ${isActive ? "" : "is-open"}`}>
             <div className='controls'>
@@ -30,7 +31,7 @@ function NavBar() {
             <div className="mobileNav-container">
                 <Link to="/">Home </Link>
                 <Link to="/story">Our Story</Link>
-                <Link to="/products">Products</Link>
+                <Link to="/blog">Blog</Link>
             </div>
             <div className='overlay'/>
         </div>

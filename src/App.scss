@@ -20,6 +20,7 @@ body {
   font: 100% $font-stack;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 ::-moz-selection { /* Code for Firefox */
   color: $main-pink;
@@ -47,6 +48,7 @@ button{
   cursor: pointer;
   background-color: $dark;
   color: #fff;
+  text-transform: uppercase;
   padding:20px 40px;
   border: none;
   font-size: 1.4em;
@@ -93,11 +95,14 @@ button{
       padding: 0 10px;
       font-weight: 100;
   }
-  .logo a{
-    color:#fff;
-    text-decoration: none;
+  .logo{
+    img{
+      width:200px;
+      height:auto;
+    }
   }
 }
+
 .mobileNav{
   display: none;
   .mobileNav-container{
@@ -207,7 +212,7 @@ button{
   align-items: center;
   padding: 0 40px;
   font-weight: 600;
-  border-bottom: 5px solid $dark;
+  border-bottom: 3px solid $dark;
   .home-header{
     display: flex;
     flex-direction: column;
@@ -306,6 +311,7 @@ button{
   .product-description{
     padding-bottom:20px;
     color: $grey;
+    line-height: 1.5;
   }
   .price {
     text-align: center;
@@ -368,6 +374,19 @@ button{
     img{
       max-width: 100%;
     }
+    p em{
+      font-weight: 600;
+      font-style: normal;
+    }
+  }
+}
+pre {
+  background-color: #282a37;
+  padding: 40px;
+  color:#fff;
+  line-height: 1.5;
+  code{
+    white-space: pre-wrap;
   }
 }
 /* End Product Detail Page */
@@ -388,6 +407,10 @@ button{
     font-size: 1em;
     display: flex;
   }
+  img{
+    width:250px;
+    height:auto;
+  }
 }
 /* END Footer */
 
@@ -397,7 +420,7 @@ button{
   .mobileNav{display: block;}
 }
 @media screen and (max-width: $large) {
-  .container{max-width: $large;}
+  .container{max-width: $large;padding-left: 20px;padding-right: 20px;}
   .home #top-products {flex-wrap: wrap;}
   .home-banner{flex-wrap: wrap;justify-content: center;}
   .home-banner .header-image, .home-banner .home-header{margin:40px 0;}
@@ -414,8 +437,11 @@ button{
   .home-banner .header-image .brackets {font-size: 4em;}
   .home-banner .header-image .bubble{left: -40px;}
   .split50 div{padding:20px;}
+  .home #top-products .product-card{flex:0 0 100%; margin: 20px 0px;}
 }
 @media screen and (max-width: $small) {
+  h1 {font-size: 2em !important;}
   .container{max-width: $small;}
+  .navbar .logo img  {width: 150px;}
 }
 /* END Mobile */

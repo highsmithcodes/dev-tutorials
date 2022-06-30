@@ -2,8 +2,8 @@
     {
         "id": 1,
         "title": "Adding JSON Data to your React Project",
-        "url": "/json-data-in-react",
-        "description": "This is the first product in the series with a whole bunch of stuff about a bunch of stuff",
+        "url": "json-data-in-react",
+        "description": "Learn how to add JSON Data to your React Project in this straight forward tutorial.",
         "date_added": "May, 3 2022",
         "image": "./images/thumbnails/json-data-in-react.png",
         "price": "free",
@@ -12,39 +12,10 @@
     {
         "id": 2,
         "title": "Deploying React Project to Netlify",
-        "url": "/deploying-react-project-to-netlify",
-        "description": "This is the second product in the series with a whole bunch of stuff about a bunch of stuff",
+        "url": "deploying-react-project-to-netlify",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.",
         "date_added": "May, 8 2022",
         "image": "./images/thumbnails/netlify-and-react.png",
-        "price": "free"
-    },
-    {
-        "id": 3,
-        "title": "Third Product",
-        "url": "/third-product",
-        "description": "This is the third product in the series with a whole bunch of stuff about a bunch of stuff",
-        "date_added": "May, 10 2022",
-        "image": "",
-        "price": "free"
-    }
-    ,
-    {
-        "id": 4,
-        "title": "Fourth Product",
-        "url": "/fourth-product",
-        "description": "This is the fourth product in the series with a whole bunch of stuff about a bunch of stuff",
-        "date_added": "May, 20 2022",
-        "image": "",
-        "price": "free"
-    }
-    ,
-    {
-        "id": 5,
-        "title": "Fifth Product",
-        "url": "/fifth-product",
-        "description": "This is the fifth product in the series with a whole bunch of stuff about a bunch of stuff",
-        "date_added": "June, 5 2022",
-        "image": "",
         "price": "free"
     }
 ]
