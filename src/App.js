@@ -9,7 +9,12 @@ import Layout from "./components/Layout";
 import { Route, Routes } from 'react-router-dom';
 import posts from './db.json';
 
+import ReactGA from 'react-ga';
+const TRACKING_ID = "UA-233535816-1";
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
+  
 
   return (
     <div className="App">
