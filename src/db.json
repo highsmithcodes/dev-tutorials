@@ -6,7 +6,8 @@
         "description": "Learn how to add JSON Data to your React Project in this straight forward tutorial.",
         "date_added": "May, 3 2022",
         "image": "./images/thumbnails/json-data-in-react.png",
-        "body": "./posts/post1.md"
+        "body": "./posts/post1.md",
+        "tags": "json, react, data, blog"
     },
     {
         "id": 2,
@@ -15,6 +16,7 @@
         "description": "Using Netlify is one of the easiest ways to deploy code from your github environment. ",
         "date_added": "May, 8 2022",
         "image": "./images/thumbnails/netlify-and-react.png",
-        "body": "./posts/post2.md"
+        "body": "./posts/post2.md",
+        "tags": "react, github, netlify"
     }
 ]

@@ -14,7 +14,7 @@ const Posts = ({posts}) => (
               <div className="product-details">
                   <div className="product-title" >{post.title}</div>
                   <div className="product-description">{post.description}</div>
-                  <div className="price">{post.price}</div>
+                  <div className="price">Read More</div>
               </div>
             </Link>
           </div>

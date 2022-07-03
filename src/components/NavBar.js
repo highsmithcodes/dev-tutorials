@@ -18,7 +18,7 @@ function NavBar() {
         <div className='logo'><Link to="/"><img src={logo} alt="Dev Weight | Developer Tutorials" /></Link></div>
         <div className='mainNav'>
              <Link to="/">Home </Link>
-             <Link to="/story">Our Story</Link>
+             {/* <Link to="/story">Our Story</Link> */}
              <Link to="/blog">Blog</Link>
         </div>
         <div className={`mobileNav ${isActive ? "" : "is-open"}`}>
@@ -30,7 +30,7 @@ function NavBar() {
             </div>
             <div className="mobileNav-container">
                 <Link to="/">Home </Link>
-                <Link to="/story">Our Story</Link>
+                {/* <Link to="/story">Our Story</Link> */}
                 <Link to="/blog">Blog</Link>
             </div>
             <div className='overlay'/>

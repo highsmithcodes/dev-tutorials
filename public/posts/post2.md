@@ -26,7 +26,7 @@ Once everything is added to your new git repository, let's head on over to [Netl
 
 Once you have signed up, head over to your dashboard and select __Add new site__ > __Import an existing project__ 
 
-You should then see a prompt to connect to your Git Provider, if you don't see your repository, click on the __Configure the Netlify app on Github__ scroll to the bottom and choose the rpository access that makes the most sense for you. For me I prefer selecting individual repositiories as opposed to permitting all repositories. 
+You should then see a prompt to connect to your Git Provider, if you don't see your repository, click on the __Configure the Netlify app on Github__ scroll to the bottom and choose the repository access that makes the most sense for you. For me I prefer selecting individual repositiories as opposed to permitting all repositories. 
 
 The next prompt you should see is for Site settings and this page should mostly be autofilled. For the most part I leave these settings alone, but I do make my __Build command__: npm run build, leave the __Base directory__ unset and add make sure my __branch to deploy__ is pointing to the right branch(main or master). 
 
@@ -34,7 +34,7 @@ Next press deploy and you'll be redirected to your projects dashboard where you 
 
 __YAY!__
 
-One thing I really enjoy about the netlify deployment process is that it has a pretty thurough step by step documnetation of your production deployments. It can also throw a big enough code error to set your production deployment to Fail. If you do come across these issues, I highly recommend heading over to [StackOverflow](https://stackoverflow.com/) for some help. There's no doubt with Netlify's growing audience that there is someone out there that has come across the same fork in the road.
+One thing I really enjoy about the netlify deployment process is that it has a pretty thorough step by step documentation of your production deployments. It can also throw a big enough code error to Fail your deployment. If you do come across these issues, I highly recommend heading over to [StackOverflow](https://stackoverflow.com/) for some help. There's no doubt with Netlify's growing audience that there is someone out there that has come across the same fork in the road.
 
 
 

@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import ReactMarkdown from "react-markdown";
+import {Helmet} from 'react-helmet';
 
 const Single = ({posts}) => {
   let params = useParams();
   const thisProduct = posts.find(post => post.url == params.url)
   const [content, setContent] = useState("");
+  var tags = thisProduct.tags;
 
   useEffect(() => {
     fetch(`.${thisProduct.body}`)
@@ -15,6 +17,10 @@ const Single = ({posts}) => {
 
   return (
     <>
+    <Helmet>
+        <title>{thisProduct.title}</title>
+        <meta name="description" content="{thisProduct.description}" />
+    </Helmet>
       <div className='container single'>
         
         <div className='single-image'>
@@ -28,6 +34,17 @@ const Single = ({posts}) => {
           </div>
           <div className='single-body'>
             <ReactMarkdown children={content} />
+          </div>
+          <div className='tags'>
+              <ul>
+                {tags.split(",").map((i) => (
+                  <li key={i}>
+                    {/* <Link to={`/category/${i}`}> */}
+                      {i}
+                    {/* </Link> */}
+                  </li>
+                ))}
+              </ul>
           </div>
         </div>
       

@@ -78,6 +78,23 @@ button{
   padding-bottom: 10px;
   line-height: 1.5;
 }
+.tags ul {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  li{
+    padding:10px 20px;
+    background: $grey;
+    color:$light;
+    margin-right: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    a{
+      color:$light;
+      text-decoration: none;
+    }
+  }
+}
 /* END Global */
 
 
@@ -458,5 +475,6 @@ pre {
   h1 {font-size: 2em !important;}
   .container{max-width: $small;}
   .navbar .logo img  {width: 150px;}
+  .product-card .thumbnail{min-height: 140px;}
 }
 /* END Mobile */
