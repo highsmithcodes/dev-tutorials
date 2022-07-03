@@ -469,7 +469,7 @@ pre {
   .home-banner .header-image .brackets {font-size: 4em;}
   .home-banner .header-image .bubble{left: -40px;}
   .split50 div{padding:20px;}
-  .home #top-products .product-card{flex:0 0 100%; margin: 20px 0px;}
+  .product-card{flex:0 0 100% !important; margin: 20px 0px;}
 }
 @media screen and (max-width: $small) {
   h1 {font-size: 2em !important;}

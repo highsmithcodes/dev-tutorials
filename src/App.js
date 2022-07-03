@@ -8,10 +8,11 @@ import Error from "./routes/Error";
 import Layout from "./components/Layout";
 import { Route, Routes } from 'react-router-dom';
 import posts from './db.json';
+import ScrollToTop from "./components/ScrollToTop";
 
 import ReactGA from 'react-ga';
-const TRACKING_ID = "UA-233535816-1";
-ReactGA.initialize(TRACKING_ID);
+ReactGA.initialize('UA-233535816-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <main>
+      <ScrollToTop>
           <Routes>
               <Route element={<Layout />}>
               <Route index element={<Home />} />
@@ -29,6 +31,7 @@ function App() {
               <Route render={() => <Error />}/>
               </Route>
           </Routes>
+          </ScrollToTop>
         </main>    
     </div>
   );
