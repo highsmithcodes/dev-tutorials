@@ -1,9 +1,9 @@
 import {Link} from 'react-router-dom';
 
 const Posts = ({posts}) => (
-  <div className="page container">
+  <div className="page container blog">
     <h1>Blog</h1>
-    <div className='sub-head'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+    <div className='sub-head'>Our library may be small, but we are uploading new tech tutorials every week. Stay tuned for new informative tech tutorials if you can't find what you're looking for below.</div>
     <div className='product-grid'>
       {posts.map(post => ( 
           <div className='product-card' key={post.id}>
