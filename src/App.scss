@@ -417,6 +417,8 @@ pre {
   padding: 40px;
   color:#fff;
   line-height: 1.5;
+  overflow: hidden;
+  overflow-wrap: break-word;
   code{
     white-space: pre-wrap;
   }
