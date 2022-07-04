@@ -14,6 +14,7 @@ const Single = ({posts}) => {
       .then((res) => res.text())
       .then((text) => setContent(text));
   }, []);
+  
 
   return (
     <>
