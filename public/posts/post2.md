@@ -11,8 +11,9 @@ cd netlify-project
 npm run build
 ```
 
-Now, add your new project to a new github repository and name it anything you want, I named my project netlify-git-tutorial
+Now, add your new project to a new github repository and name it anything you want, I named my project netlify-git-tutorial.
 
+*terminal*
 ```javascript
 git init
 git add README.md
@@ -22,7 +23,7 @@ git remote add origin https://github.com/highsmithcodes/netlify-git-tutorial.git
 git push -u origin main
 ```
 
-Once everything is added to your new git repository, let's head on over to [Netlify](https://www.netlify.com/) and sign up for an account using out github account
+Once everything is added to your new git repository, let's head on over to [Netlify](https://www.netlify.com/) and sign up for an account using out github account.
 
 Once you have signed up, head over to your dashboard and select __Add new site__ > __Import an existing project__ 
 

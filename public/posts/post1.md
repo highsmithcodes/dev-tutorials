@@ -2,7 +2,7 @@ Adding JSON data to your project can be a pretty easy way to display organized c
 
 First, create your .json file which will hold your data:
 
-*[db.json]*
+*db.json*
 ```json
 [
     {
@@ -22,7 +22,7 @@ First, create your .json file which will hold your data:
 
 Then create 2 files which will display said data:
 
-*[Posts.js]*
+*Posts.js*
 ```javascript
 const Posts = ({posts}) => (
     <div>
@@ -33,7 +33,7 @@ const Posts = ({posts}) => (
 export default Posts;
 ```
 
-*[PostDetail.js]*
+*PostDetail.js*
 ```javascript
 const PostDetail = ({posts}) => {
     return (
@@ -48,7 +48,7 @@ export default PostDetail;
 
 As you can see, we passed in a variable called posts, let’s make sure at a global level these posts are being imported in. Head on over to your App.js to import your .json data and your Posts and PostDetail.
 
-*[App.js]*
+*App.js*
 ```javascript
 import { Route, Routes } from 'react-router-dom';
 import Posts from './Posts';
@@ -68,7 +68,7 @@ Now, let’s build out our Post and Post Detail page a bit more.
 
 In our Posts page, we’re gonna map through the .json data and start displaying our content.
 
-*[Posts.js]*
+*Posts.js*
 ```javascript
 const Posts = ({posts}) => (
     <div>
@@ -86,7 +86,7 @@ export default Posts
 
 Now that we’re displaying the data, let’s wrap this in a Link tag imported from react-router. This Link will redirect you to the PostDetails page of that Post.
 
-*[Posts.js]*
+*Posts.js*
 ```javascript
 import { Link } from 'react-router-dom';
 
@@ -106,7 +106,7 @@ const Posts = ({posts}) => (
 
 In our PostDetail page we’re going to pull the correct data by identifying the id with the useParams hook, then running a function to pull the right post that matches the id. I’m making it sound more complicated than it is, I promise:
 
-*[PostDetail.js]*
+*PostDetail.js*
 ```javascript
 import { useParams } from 'react-router-dom';
 

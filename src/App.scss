@@ -409,6 +409,13 @@ button{
     p em{
       font-weight: 600;
       font-style: normal;
+      margin-bottom: -20px !important;
+      display: block;
+      border: 1px solid black;
+      border-bottom:none !important;
+      width: max-content;
+      padding: 5px 10px;
+      border-radius: 5px;
     }
   }
 }

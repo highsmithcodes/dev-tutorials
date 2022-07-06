@@ -18,5 +18,15 @@
         "image": "./images/thumbnails/netlify-and-react.png",
         "body": "./posts/post2.md",
         "tags": "react, github, netlify"
+    },
+    {
+        "id": 3,
+        "title": "Adding Sass to your React Project",
+        "url": "adding-sass-to-react-project",
+        "description": "If your react app is not already using sass, this tutorial will show you a quick and easy way to do it.",
+        "date_added": "July, 4 2022",
+        "body": "./posts/post3.md",
+        "image": "./images/thumbnails/adding-sass-to-react-build.png",
+        "tags": "react, sass, preprocessor"
     }
 ]
