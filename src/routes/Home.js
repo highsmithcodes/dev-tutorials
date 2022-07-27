@@ -17,7 +17,7 @@ function Home(){
     </div>
     <div className="page home container">
       <div className='w-80' id="intro-section">
-        <p>DevWeight is a relatively new website that hopefully helps the everyday developer sharpen their skills with a wide range of tech topics. Browse some of our most recent tutorials below.</p>
+        <p>DevWeight is an educational platform helping the everyday developer sharpen their skills. Browse some of our most recent tutorials below.</p>
       </div>
       <div className='top-product-container'>
         <h2>Tutorials</h2>
