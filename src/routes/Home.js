@@ -23,7 +23,7 @@ function Home(){
         <h2>Tutorials</h2>
         <div id="top-products">
           <div className='product-grid'>
-              {posts.slice(0, 3).map(post => ( 
+              {posts.slice(0, 4).map(post => ( 
                 <div className='product-card' key={post.id}>
                   <Link to={`/blog/${post.url}`}>
                     <div className='thumbnail'>
