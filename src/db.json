@@ -28,5 +28,15 @@
         "body": "./posts/post3.md",
         "image": "./images/thumbnails/adding-sass-to-react-build.png",
         "tags": "react, sass, preprocessor"
+    },
+    {
+        "id": 4,
+        "title": "Animating pseudo-elements",
+        "url": "animating-pseudo-elements",
+        "description": "Add some flare to your project with css animations using keyframes and pseudo elements",
+        "date_added": "July, 26 2022",
+        "body": "./posts/post4.md",
+        "image": "./images/thumbnails/animating-pseudo-elements.png",
+        "tags": "css, animations"
     }
 ]
