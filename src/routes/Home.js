@@ -7,7 +7,7 @@ function Home(){
   <>
     <div className='home-banner'>
       <div className='home-header'>
-        <h1>Poop Tutorials</h1>
+        <h1>Dev Tutorials</h1>
         <div className='home-sub-head'>for the passionate developer</div>
       </div>
       <div className='header-image'>
