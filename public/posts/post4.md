@@ -4,6 +4,8 @@ In this tutorial we’ll introduce you to the basics of animating pseudo-element
 
 For our first example let's use a pseudo-element to underline our header from left to right:
 
+![underline animation](../images/underline.gif)
+
 *index.html*
 ```html
 <div id=”underline”>
@@ -92,5 +94,7 @@ h1:after{
 ```
 
 Within our @keyframes declaration we only explored the option of transforming between 0% and 100%, where 0% represents the beginning and 100% represents the end of our animation path. However if you are looking to create more complex animations you can also add in percentages between those endpoints. 
+
+![underline animation elements](../images/underline-2.gif)
 
 Now that we’ve introduced you to the basics all that’s left to do is to play around. 
