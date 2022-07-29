@@ -48,7 +48,9 @@ h1:before{
 
 ```
 
-Looks good right, with the overflow:hidden; on our h1 it frames the element nicely as our animation slowly rolls in. Now there are a few lines of code we need to add in order for this animation to render across all browsers. 
+Looks good right? Well with our h1 overflow set to hidden it frames the element within the relative boundaries as our animation slowly rolls in. 
+
+Now there are a few lines of code we need to add in order for this animation to render across all browsers. 
 
 *style.css*
 ```css
@@ -62,9 +64,9 @@ h1:before{
 }
 ```
 
-It seems like a lot, but adding in the vendor prefixes on both the @keyframes declaration and the animation property helps support the older WebKit-based browsers that may not be rendering your animation correctly. If you chose to include cross compatibility in your keyframe animations, make note of the order in the example above, it’s important for rendering.
+It seems like a lot, but adding in the vendor prefixes on both the [@keyframes](https://webkit.org/blog/324/css-animation-2/#:~:text=A%20%40%2Dwebkit%2Dkeyframes%20block,interpolate%20style%20between%20the%20keyframes.) declaration and the animation property, we help support the older webkit-based browsers that may not be rendering your animation correctly. If you chose to include cross compatibility in your keyframe animations, make note of the order in the example above, it’s important for rendering.
 
-In our example above, we are only utilizing the :before pseudo-element, but the beauty of pseudo-elements is that you can have both a :before and :after pseudo-element per each div. So let’s add a little more flare to our h1 with an :after pseudo-element
+In our example above, we are only utilizing the :before pseudo-element, but the beauty of pseudo-elements is that you can have both a :before and :after pseudo-element per each div. So let’s add a little more flare to our h1 with an :after pseudo-element.
 
 *style.css*
 ```css
@@ -97,4 +99,4 @@ Within our @keyframes declaration we only explored the option of transforming be
 
 ![underline animation elements](../images/underline-2.gif)
 
-Now that we’ve introduced you to the basics all that’s left to do is to play around. 
+Now that we’ve introduced you to the basics all that’s left to do is to play around and test the limits of your new psuedo elements.
