@@ -38,15 +38,5 @@
         "body": "./posts/post4.md",
         "image": "./images/thumbnails/animating-pseudo-elements.png",
         "tags": "css, animations"
-    },
-    {
-        "id": 5,
-        "title": "Creating a Login Page with React, PostgreSQL and Docker",
-        "url": "react-postgresql-docker-login",
-        "description": "Create a Login Page with a React Front-End, a PostgreSQL database and a Docker Container",
-        "date_added": "September, 10 2022",
-        "body": "./posts/post5.md",
-        "image": "./images/thumbnails/postgres-react-docker.jpg",
-        "tags": "PostgreSQL, React, Docker"
     }
 ]
