@@ -2,6 +2,7 @@
 
 DevWeight is an educational platform helping the everyday developer sharpen their skills. 
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/83279641-a571-4a66-a7dd-5c3e8fda8656/deploy-status)](https://app.netlify.com/sites/peppy-torrone-230ed5/deploys)
 ## Credits
 
 This Project uses the following:
