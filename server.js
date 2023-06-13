@@ -5,13 +5,7 @@ const path = require('path');
 const app = express();
 const posts = require(path.join(__dirname, 'db-api.json'));
 
-const corsOptions = {
-  origin: 'https://www.devweight.com',
-  methods: 'GET',
-  allowedHeaders: 'Content-Type',
-};
-
-app.use(cors(corsOptions));
+app.use(cors()); // Enable CORS for all routes
 
 app.get('/', (req, res) => {
   res.send('API is running');
