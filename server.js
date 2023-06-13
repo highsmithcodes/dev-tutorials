@@ -11,8 +11,12 @@ const corsOptions = {
   
 app.use(cors(corsOptions));
 // app.use(cors()); // Enable CORS for all routes
+app.get('/', (req, res) => {
+    res.send('API is running');
+  });
 
 app.get('/api/posts', (req, res) => {
+    console.log(posts)
   res.json(posts);
 });
 
