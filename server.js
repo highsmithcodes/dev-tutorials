@@ -1,12 +1,13 @@
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('src/db-api.json');
-const middlewares = jsonServer.defaults();
+const express = require('express');
+const app = express();
+const posts = require('./db-api.json');
 
-server.use(middlewares);
-server.use('/api', router);
+app.get('/api/posts', (req, res) => {
+  res.json(posts);
+});
 
 const port = 3001;
-server.listen(port, () => {
+
+app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
