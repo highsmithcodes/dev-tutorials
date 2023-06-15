@@ -38,5 +38,15 @@
         "body": "./posts/post4.md",
         "image": "./images/thumbnails/animating-pseudo-elements.png",
         "tags": "css, animations"
+    },
+    {
+        "id": 5,
+        "title": "Connecting your React app with a MongoDB Atlas database",
+        "url": "react-and-mongodb-atlas",
+        "description": "Connect a React Front-end to a MongoDB Atlas database",
+        "date_added": "January, 2 2023",
+        "body": "./posts/post6.md",
+        "image": "./images/thumbnails/react-mongodb.jpg",
+        "tags": "reactjs, mongodb, database"
     }
 ]
