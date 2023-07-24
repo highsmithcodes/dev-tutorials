@@ -18,3 +18,8 @@ This Project uses the following:
 ## Website
 
 > [https://www.devweight.com/](https://www.devweight.com/);
+
+
+![netlify-and-react](https://github.com/highsmithcodes/dev-tutorials/assets/17016293/2933acfe-8866-49ae-a0d3-4c082386a07e)
+![json-data-in-react](https://github.com/highsmithcodes/dev-tutorials/assets/17016293/d367ab8d-ca7a-4227-911b-b2dba2c37be4)
+![adding-sass-to-react-build](https://github.com/highsmithcodes/dev-tutorials/assets/17016293/7e9edfa9-d1ef-4b8f-aea3-15aceffe9909)
