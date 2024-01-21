@@ -1,8 +1,58 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-import posts from '../db.json';
+// import posts from '../db.json';
+import {s3} from '../config/aws-config';
 
 function Home(){ 
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await s3.listObjectsV2({
+          Bucket: 'devweight',
+          Prefix: 'posts/',
+        }).promise();
+  
+        const objects = response.Contents;
+  
+        console.log('objects', objects)
+  
+        // Fetch the content of each .md file
+        const postsData = await Promise.all(objects.map(async (object) => {
+          const mdFileKey = object.Key;
+          console.log('mdFileKey', mdFileKey)
+  
+          // Skip the "posts/" directory itself
+          if (mdFileKey.endsWith('/')) {
+            return null;
+          }
+  
+          const mdFileResponse = await s3.getObject({
+            Bucket: 'devweight',
+            Key: mdFileKey,
+          }).promise();
+  
+          // Assuming your .md files contain the post data in JSON format
+          return JSON.parse(mdFileResponse.Body.toString());
+        }));
+  
+        // Filter out null values (directory entry) and setPosts with valid data
+        setPosts(postsData.filter(post => post !== null), () => {
+          console.log('Updated Posts:', posts); // Add this line for debugging
+        });
+  
+        console.log('posts', posts); // Move this line here
+      } catch (error) {
+        console.error('Error fetching posts from S3:', error);
+      }
+    };
+  
+    fetchPosts();
+  }, []);
+
+  console.log('posts', posts)
+
   return(
   <>
     <div className='home-banner'>
@@ -23,20 +73,20 @@ function Home(){
         <h2>Tutorials</h2>
         <div id="top-products">
           <div className='product-grid'>
-              {posts.slice(0, 4).map(post => ( 
-                <div className='product-card' key={post.id}>
-                  <Link to={`/blog/${post.url}`}>
-                    <div className='thumbnail'>
-                    <img src={post.image} alt={post.title} />
-                    </div>
-                    <div className="product-details">
-                        <div className="product-title" >{post.title}</div>
-                        <div className="product-description">{post.description}</div>
-                        <div className="price">Read More</div>
-                    </div>
-                  </Link>
+          {posts.slice(0, 4).map((post) => (
+            <div className='product-card' key={post.id}>
+              <Link to={`/blog/${post.url}`}>
+                <div className='thumbnail'>
+                  <img src={post.image} alt={post.title} />
                 </div>
-              ))} 
+                <div className='product-details'>
+                  <div className='product-title'>{post.title}</div>
+                  <div className='product-description'>{post.description}</div>
+                  <div className='price'>Read More</div>
+                </div>
+              </Link>
+            </div>
+          ))}
             </div>
         </div>
         <div class="center-align">
